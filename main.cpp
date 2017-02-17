@@ -30,7 +30,7 @@ std::vector<std::vector<bool>> make_matrix(int number) {
   return matrix;
 }
 
-void print_double_vector(const std::vector < std::vector<bool>>& vect) {
+void print_double_vector(const std::vector<std::vector<bool>>& vect) {
   for (unsigned int i = 0; i < vect.size(); i++) {
     for (unsigned int j = 0; j < vect[i].size(); j++) {
       std::cout << vect[i][j] << " ";
