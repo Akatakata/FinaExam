@@ -25,7 +25,7 @@ int ask_a_number() {
 std::vector<std::vector<bool>> make_matrix(int number) {
   std::vector<std::vector<bool>> matrix(number, std::vector<bool>(number, 0));
   for (int i = 0; i < number; i++) {
-    matrix[i].at(i) = 1;
+    matrix[i][i] = 1;
   }
   return matrix;
 }
