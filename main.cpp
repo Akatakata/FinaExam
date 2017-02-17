@@ -11,6 +11,17 @@
 #include <iostream>
 #include <vector>
 
+int ask_a_number() {
+  std::cout << "Please give me the size of the matrix: ";
+  int input;
+  std::cin >> input;
+  while (input < 1) {
+    std::cerr << "Error: Matrix size can not be negative. Try again.: ";
+    std::cin >> input;
+  }
+  return input;
+}
+
 std::vector<std::vector<bool>> make_matrix(int number) {
   std::vector<std::vector<bool>> matrix(number, std::vector<bool>(number, 0));
   for (int i = 0; i < number; i++) {
@@ -30,9 +41,7 @@ void print_double_vector(const std::vector < std::vector<bool>>& vect) {
 }
 
 int main() {
-  std::cout << "Please give me the size of the matrix: ";
-  int input;
-  std::cin >> input;
-  print_double_vector(make_matrix(input));
+  int size = ask_a_number();
+  print_double_vector(make_matrix(size));
   return 0;
 }
